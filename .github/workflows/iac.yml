@@ -1,5 +1,11 @@
 name: IAC deployment.
 on:
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        required: false
+        default: false
   push:
     branches:
       - master
