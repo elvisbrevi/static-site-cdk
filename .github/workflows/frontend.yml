@@ -1,13 +1,13 @@
 name: Frontend deployment.
 on:
-   push:
-     branches:
-       - master
-     paths:
-       - 'frontend/**'
-   pull_request_review:
-     types:
-       - submitted
+  push:
+    branches:
+      - master
+    paths:
+      - 'frontend/**'
+  pull_request_review:
+    types:
+      - submitted
 
 jobs:
   build:
