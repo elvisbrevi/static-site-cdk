@@ -17,7 +17,7 @@ export class IacStack extends cdk.Stack {
     const staticWebsiteBucket = new s3.Bucket(this, `bucket-${id}`, {
       websiteIndexDocument: 'index.html',
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
-      bucketName: `static-site-${id}`
+      bucketName: `static-website-${id}`
     });
 
     const hostedZone = route53.HostedZone.fromLookup(
