@@ -1,16 +1,10 @@
 name: IAC deployment.
 on:
-  workflow_dispatch:
-    inputs:
-      debug:
-        type: boolean
-        required: false
-        default: false
   push:
     branches:
       - main
     paths:
-      - 'infra/**'
+      - 'iac/**'
   pull_request_review:
     types:
       - submitted
