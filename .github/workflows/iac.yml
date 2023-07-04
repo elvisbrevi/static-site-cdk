@@ -8,9 +8,9 @@ on:
         default: false
   push:
     branches:
-      - master
+      - main
     paths:
-      - 'iac/**'
+      - 'infra/**'
   pull_request_review:
     types:
       - submitted
