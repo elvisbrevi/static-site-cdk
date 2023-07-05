@@ -7,7 +7,7 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import { CloudFrontTarget } from 'aws-cdk-lib/aws-route53-targets';
 import { Construct } from 'constructs';
 
-const DOMAIN_NAME = "elvisbrevi.com/xd";
+const DOMAIN_NAME = "elvisbrevi.com";
 const WWW_DOMAIN_NAME = `www.${DOMAIN_NAME}`;
 
 export class IacStack extends cdk.Stack {
@@ -33,7 +33,7 @@ export class IacStack extends cdk.Stack {
 
     const oac = new cloudfront.CfnOriginAccessControl(this, `oac-${id}`, {
       originAccessControlConfig: {
-          name: `BlogCfnOriginAccessControl`,
+          name: `StaticWebOriginAccessControl`,
           originAccessControlOriginType: 's3',
           signingBehavior: 'always',
           signingProtocol: 'sigv4',
